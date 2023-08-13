@@ -21,8 +21,9 @@ time, mark, audio, video {
 	border: 0;
 	font-size: 100%;
 	font: inherit;
-  font-family: 'Pretendard';
 	vertical-align: baseline;
+  font-family: 'Pretendard';
+
 }
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, 
@@ -31,6 +32,7 @@ footer, header, hgroup, menu, nav, section {
 }
 body {
 	line-height: 1;
+  height: 100%;
 }
 ol, ul {
 	list-style: none;
@@ -48,11 +50,14 @@ table {
 	border-spacing: 0;
 }
 
-body {
-  height: 100vh;
+button {
+  font-family: 'Pretendard';
 }
 
+
 #root {
+  height: 100vh;
+
   /* 색상 변수 */
   --main-color: #484BB4;
   --font-gray: #808080;

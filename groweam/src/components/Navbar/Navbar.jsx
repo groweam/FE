@@ -1,7 +1,7 @@
 import React from 'react'
 import { NavLink, Link } from 'react-router-dom';
-import { ReactComponent as Logo } from '../assets/imgs/logo.svg'
-import { ReactComponent as TeamManageIcon } from '../assets/icons/team_manage_icon.svg'
+import { ReactComponent as Logo } from '../../assets/imgs/logo.svg'
+import { ReactComponent as TeamManageIcon } from '../../assets/icons/team_manage_icon.svg'
 
 import styled from 'styled-components';
 
@@ -57,9 +57,8 @@ const Menu = styled.nav`
 
   a{
     padding: 0.25rem 0;
+    letter-spacing: 0.02rem;
   }
-
-
 
   a.active{
     font-weight: 600;
