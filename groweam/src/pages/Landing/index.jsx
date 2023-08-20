@@ -1,22 +1,28 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from 'styled-components';
 import { ReactComponent as LandingBg } from '../../assets/imgs/landing_bg.svg'
-import StyledButton from "../../components/common/StyledButton/StyledButton";
+import StyledButton from "../../components/common/StyledButton";
+import AddProjectModal from "../../components/Landing/AddProjectModal";
 
 const Landing = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
   const handleOnClick = ((e) => {
-    // 새 프로젝트 생성하기 모달 띄우기
+    setIsOpen(true)
   })
 
     return (
+      <>
         <Container>
           <ContentWrapper>
             <MainText>성공적인 협업을 위한 <br/> 프로젝트 관리 서비스</MainText>
             <SubText>할 일 관리부터 회의일정 정하기까지 <br/> 팀 프로젝트에서 필요한 것들을 팀원들과 공유해보세요.</SubText>
-            <StyledButton text={`새 프로젝트 생성`} width="16rem" fontSize='1.5rem' handleOnClick={handleOnClick} />
+            <StyledButton text={`새 프로젝트 생성`} padding={'0.75rem 1.25rem'} width="16rem" fontSize='1.5rem' handleOnClick={handleOnClick} />
           </ContentWrapper>
           <LandingBg/>
         </Container>
+        {isOpen && <AddProjectModal setIsOpen={setIsOpen}/>}
+      </>
     );
 }
 
